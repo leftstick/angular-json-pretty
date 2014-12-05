@@ -1,0 +1,8 @@
+#npm
+node_modules/
+
+#bower
+bower/
+demo/bower/
+demo/angular-json-pretty.css
+demo/angular-json-pretty.js

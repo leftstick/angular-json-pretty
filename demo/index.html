@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html ng-app="demo">
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>JSONPretty</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+  <link rel="alternate icon" type="image/png" href="img/favicon.png">
+  <link rel="stylesheet" href="bower/amazeui/dist/css/amazeui.min.css"/>
+  <link rel="stylesheet" href="bower/animate.css/animate.min.css"/>
+  <link rel="stylesheet" href="prism.css">
+  <link rel="stylesheet" href="angular-json-pretty.css"/>
+  <link rel="stylesheet" href="demo.css"/>
+
+</head>
+<body>
+
+<div class="get">
+  <div class="am-g">
+    <div class="am-u-lg-12">
+      <h1 class="get-title animated rubberBand">angular-json-pretty</h1>
+      <p>
+        Directive for prettifying JSON
+      </p>
+      <p>
+      <a href="https://github.com/leftstick/angular-json-pretty" class="am-icon-btn am-icon-github github-source" data-am-popover="{content: 'Fork on Github', trigger: 'hover focus'}"></a>
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="detail" ng-controller="DemoController">
+  <div class="am-g am-container">
+    <div class="am-u-lg-12">
+      <h2 class="detail-h2">One line code, prettify the JSON for you!</h2>
+
+      <div class="am-g">
+        <div class="am-u-lg-12 am-u-md-12 am-u-sm-12 detail-mb">
+
+            <div class="code-title">
+                <span>Display JSON Object</span>
+            </div>
+
+            <div class="am-tabs" data-am-tabs>
+              <ul class="am-tabs-nav am-nav am-nav-tabs">
+                <li class="am-active"><a href="#html">HTML</a></li>
+                <li><a href="#javascript">JavaScript</a></li>
+                <li><a href="#result">Result</a></li>
+              </ul>
+
+              <div class="am-tabs-bd">
+                <div class="am-tab-panel am-fade am-in am-active" id="html">
+                   <pre><code class="language-markup"><!-- 
+                    -->&lt;pre json-pretty data="jsonObj"&gt;&lt;/pre&gt;<!-- 
+                    --></code></pre>
+                </div>
+                <div class="am-tab-panel am-fade" id="javascript">
+                  <pre><code class="language-javascript"><!-- 
+                  -->demo.controller('DemoController', function($scope) {
+    $scope.jsonObj = {
+        labels: ['1', '2', '3', '4', '5', '6'],
+        series: [{
+            name: 'Fibonacci sequence',
+            data: [1, 2, 3, 5, 8, 13]
+        }, {
+            name: 'Golden section',
+            data: [1, 1.618, 2.618, 4.236, 6.854, 11.09]
+        }]
+    };
+});
+</code></pre>
+                </div>
+                <div class="am-tab-panel am-fade" id="result">
+                     <pre json-pretty data="jsonObj"></pre>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <div class="am-u-lg-12 am-u-md-12 am-u-sm-12 detail-mb">
+
+            <div class="code-title">
+                <span>Display JSON String</span>
+            </div>
+
+            <div class="am-tabs" data-am-tabs>
+              <ul class="am-tabs-nav am-nav am-nav-tabs">
+                <li class="am-active"><a href="#html">HTML</a></li>
+                <li><a href="#javascript">JavaScript</a></li>
+                <li><a href="#result">Result</a></li>
+              </ul>
+
+              <div class="am-tabs-bd">
+                <div class="am-tab-panel am-fade am-in am-active" id="html">
+                   <pre><code class="language-markup"><!-- 
+                    -->&lt;pre json-pretty data="jsonStr"&gt;&lt;/pre&gt;<!-- 
+                    --></code></pre>
+                </div>
+                <div class="am-tab-panel am-fade" id="javascript">
+                  <pre><code class="language-javascript"><!-- 
+                  -->demo.controller('DemoController', function($scope) {
+    $scope.jsonStr = '{"name":"Test","series":[{"name":"Fibonacci sequence","data":[1,2,3,5,8,13]}]}';
+});
+</code></pre>
+                </div>
+                <div class="am-tab-panel am-fade" id="result">
+                     <pre json-pretty data="jsonStr"></pre>
+                </div>
+              </div>
+            </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <p>&copy; 2014 Licensed under <a
+      href="https://raw.githubusercontent.com/leftstick/angular-json-pretty/master/LICENSE" target="_blank">MIT license</a>. by the Howard.Zuo</p>
+</footer>
+
+<script type="text/javascript" src="bower/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="bower/amazeui/dist/js/amazeui.min.js"></script>
+<script type="text/javascript" src="prism.js"></script>
+<script type="text/javascript" src="bower/angular/angular.min.js"></script>
+<script type="text/javascript" src="angular-json-pretty.js"></script>
+<script type="text/javascript" src="demo.js"></script>
+</body>
+</html>
