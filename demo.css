@@ -1,0 +1,61 @@
+.get {
+    background: #f37b1d;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.get-title {
+    font-size: 200%;
+    border: 2px solid #fff;
+    padding: 20px;
+    display: inline-block;
+}
+
+.github-source:hover{
+    -webkit-animation-name: shake;
+    animation-name: shake;
+
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.detail {
+    background: #fff;
+}
+
+.detail-h2 {
+    text-align: center;
+    font-size: 150%;
+    margin: 40px 0;
+}
+
+.detail-mb {
+    margin-bottom: 30px;
+}
+
+.detail-mb .am-active{
+    font-weight: bold;
+}
+.detail-mb .am-active a{
+    color: #f37b1d !important;
+}
+
+.code-title{
+    color: #fff;
+    background-color: #f37b1d;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 5px;
+}
+
+.footer p {
+    color: #7f8c8d;
+    margin: 0;
+    padding: 15px 0;
+    text-align: center;
+    background: #2d3e50;
+}
